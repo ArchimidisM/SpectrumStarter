@@ -1,4 +1,4 @@
-=== SpectrumStarter Starter WordPress Theme ===
+**SpectrumStarter Starter WordPress Theme**
 Contributors: ArchimidisM
 Requires at least: WordPress 4.4
 Tested up to: WordPress 4.6
@@ -7,7 +7,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images,sticky-post, threaded-comments, translation-ready
 
-== Description ==
+ **Description**
 SpectrumStarter, is a great , simple and responsive Starter WordPress Theme. It is built on the UIkit Framework and uses a very clean design to help you starting fast with theme development. It is a great starting theme for any developer out there with very clean and well commented code. If you want to use it as a plain blog, then feel free to do so! It utilizes a clean design and it is customizer ready. Also this WordPress starter theme, passes the Theme Check tests, so you can use it as a base , create a theme and upload it directly to the WordPress.org.
 
 * Mobile-first, Responsive Layout
@@ -17,7 +17,7 @@ SpectrumStarter, is a great , simple and responsive Starter WordPress Theme. It 
 * WordPress Customizer ready.
 * The GPL v2.0 or later license. :) Use it to make something cool.
 
-== Installation ==
+ **Installation**
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
 2. Type in Spectrum Starter in the search form and press the 'Enter' key on your keyboard.
@@ -27,9 +27,9 @@ SpectrumStarter, is a great , simple and responsive Starter WordPress Theme. It 
 == How to use this theme ==
  If you want to read detailed instructions about how to use this starter theme, please visit this [link](http://spectrumthemes.com/spectrum-starter/how-to-use-the-spectrumstarter-wordpress-theme/)
 
-== Copyright ==
+ **Copyright** 
 
-Spectrum Starter WordPress Theme, Copyright 2016 WordPress.org
+Spectrum Starter WordPress Theme, Copyright 2016 Archimidis Mertzanos
 Spectrum Starter is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
@@ -93,8 +93,7 @@ You can modify the theme with the help of the hooks that contains. List of the h
 . before_general_archive_content_starts
 . after_general_archive_content_ends
 
-
-== Change Log ==
+ **Change Log**
 
 = Version 0.1 =
 - Initial Release
