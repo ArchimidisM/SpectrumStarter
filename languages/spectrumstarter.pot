@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SpectrumStarter\n"
+"POT-Creation-Date: 2016-08-27 01:27+0300\n"
+"PO-Revision-Date: 2016-08-27 01:27+0300\n"
+"Last-Translator: \n"
+"Language-Team: ArchimidisM <admin@mertzanos.gr>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:122
+msgid "Main Navigation"
+msgstr ""
+
+#: functions.php:281
+msgid "You are viewing posts tagged with: "
+msgstr ""
+
+#: functions.php:285
+msgid "You are viewing posts in: "
+msgstr ""
+
+#: functions.php:290
+msgid "Search results for: "
+msgstr ""
+
+#: functions.php:293
+msgid "Archive of "
+msgstr ""
+
+#: template-parts/content-archive.php:37 template-parts/content-author.php:37
+#: template-parts/content-category.php:37 template-parts/content-index.php:38
+#: template-parts/content-search.php:37 template-parts/content-single.php:35
+#: template-parts/content-tag.php:37
+msgid "Written by "
+msgstr ""
+
+#: template-parts/content-archive.php:42 template-parts/content-author.php:42
+#: template-parts/content-category.php:42 template-parts/content-index.php:43
+#: template-parts/content-search.php:42 template-parts/content-single.php:40
+#: template-parts/content-tag.php:42
+msgid "View posts from this category"
+msgstr ""
+
+#: template-parts/content-archive.php:55 template-parts/content-author.php:55
+#: template-parts/content-category.php:55 template-parts/content-index.php:56
+#: template-parts/content-search.php:55 template-parts/content-tag.php:55
+msgid "Read More"
+msgstr ""
+
+#: template-parts/content-archive.php:66 template-parts/content-author.php:66
+#: template-parts/content-category.php:66 template-parts/content-index.php:67
+#: template-parts/content-search.php:66 template-parts/content-tag.php:66
+msgid " "
+msgstr ""
+
+#: template-parts/content-archive.php:68 template-parts/content-author.php:68
+#: template-parts/content-category.php:68 template-parts/content-index.php:69
+#: template-parts/content-search.php:68 template-parts/content-tag.php:68
+msgid "Older"
+msgstr ""
+
+#: template-parts/content-archive.php:69 template-parts/content-author.php:69
+#: template-parts/content-category.php:69 template-parts/content-index.php:70
+#: template-parts/content-search.php:69 template-parts/content-tag.php:69
+msgid "Newer"
+msgstr ""
+
+#: template-parts/content-archive.php:76 template-parts/content-author.php:76
+#: template-parts/content-category.php:76 template-parts/content-index.php:77
+#: template-parts/content-page.php:56 template-parts/content-search.php:76
+#: template-parts/content-single.php:80 template-parts/content-tag.php:76
+msgid "No posts were found"
+msgstr ""
+
+#: template-parts/header-image.php:16
+msgid "Header Image"
+msgstr ""
+
+#: template-parts/main-navigation.php:19
+msgid "Open the menu"
+msgstr ""

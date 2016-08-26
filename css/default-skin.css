@@ -1,0 +1,120 @@
+/*
+Theme Name: Spectrum Starter
+Description: Contains all the colors of all the elements of the theme. It is used to create skins with ease.
+*/
+
+/**
+ * Table of Contents
+ * 1.0 - Elements
+ * 3.0 - Typography
+ * 4.0 - Header
+ * 5.0 - Navigation
+ *   5.1 - Main menu
+ *   5.2 - Mobile Menu
+ * 6.0 - Content
+ * 7.0 - Widgets
+ * 8.0 - Comments
+ * 9.0 - Footer area
+ */
+
+
+/**
+* 1.0 -  Elements
+**/
+body {
+  background-color: #ffffff;
+  color: #555555;
+}
+
+h1, h2, h3, h4 {
+  color: #38383a;
+}
+
+a{
+  color: #e87e04;
+}
+a:hover{
+  color:#555555;
+}
+/**
+* 4.0 - Header
+**/
+.site-header{
+  color:#efefef;
+  background: #2e2e30;
+}
+.site-header a{
+  color:#efefef;
+}
+.site-header a:hover{
+  color:#e87e04;
+}
+
+/**
+* 5.0 - Main Navigation
+**/
+.main-navigation{
+  background:#38383a;
+}
+.sub-menu{
+  background:#38383a;
+  border-bottom:4px solid #e87e04;
+}
+
+/**
+* 5.2 Mobile Menu
+**/
+#mobile-menu > .uk-offcanvas-bar{
+  background:#efefef;
+}
+
+.mobile-navigation li a:hover{
+  background:#ffffff;
+}
+
+/**
+* 6.0 - Content
+**/
+.post-meta{
+  color: #989898;
+}
+.post-title a{
+  color:#555555;
+}
+.post-title a:hover{
+  color:#e87e04;
+  text-decoration:none;
+}
+/* 6.2 - Blog index items */
+.blog-single-entry{
+  background:#ffffff;
+}
+.no-posts-found{
+  background:#ffffff;
+}
+.single-archive-title{
+  background:#ffffff;
+}
+
+/**
+* 7.0 - Widgets
+**/
+.widget{
+  background:#ffffff;
+}
+
+/**
+* 8.0 - Comments
+**/
+.comments-area{
+  border-top:4px double #efefef;
+  background:#ffffff;
+}
+.comment-form input[type="submit"]{
+  background:#ececec;
+  color:#555555;
+}
+.comment-form input[type="submit"]:hover{
+  background:#ececec;
+  color:#999999;
+}

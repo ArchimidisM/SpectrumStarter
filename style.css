@@ -1,0 +1,577 @@
+/*
+Theme Name: SpectrumStarter
+Theme URI: http://spectrumthemes.com/spectrum-starter/how-to-use-the-spectrumstarter-wordpress-theme/
+Author: Archimidis Mertzanos
+Author URI: https://spectrumthemes.com/about-archimidis
+Description: SpectrumStarter, is a great , simple and responsive Starter WordPress Theme. It is built on the UIkit Framework and uses a very clean design to help you starting fast with theme development. It is a great starting theme for any developer out there with very clean and well commented code. If you want to use it as a plain blog, then feel free to do so! It utilizes a clean design and it is customizer ready. Also this WordPress starter theme, passes the Theme Check tests, so you can use it as a base , create a theme and upload it directly to the WordPress.org.
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images,sticky-post, threaded-comments, translation-ready
+Text Domain: spectrumstarter
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/**
+ * Table of Contents
+ * 0.1 - Helper Classes
+ * 1.0 - Default WordPress classes
+ * 2.0 - Elements
+ * 3.0 - Typography
+ * 4.0 - Header
+ * 5.0 - Navigation
+ *   5.1 - Main menu
+ *   5.2 - Mobile Menu
+ * 6.0 - Content
+ * 7.0 - Widgets
+ * 8.0 - Comments
+ * 9.0 - Footer area
+ */
+
+
+/**
+* 0.1 - Helper Classes
+**/
+.pad-20{
+  padding:20px;
+}
+.pad-30{
+  padding:30px;
+}
+
+.pad-40{
+  padding:40px;
+}
+
+.pad-60{
+  padding:60px;
+}
+
+.padd-80{
+  padding:80px;
+}
+
+.pad-tb-20{
+  padding:20px 0;
+}
+
+.pad-tb-40{
+  padding:40px 0;
+}
+
+.pad-tb-60{
+  padding:60px 0;
+}
+
+.padd-tb-80{
+  padding:80px 0;
+}
+
+.mar-10{
+  margin:10px;
+}
+
+.mar-20{
+  margin:20px;
+}
+
+.mar-30{
+  margin:30px;
+}
+
+.mar-40{
+  margin:40px;
+}
+
+.mar-50{
+  margin:50px;
+}
+
+.mar-60{
+  margin:60px;
+}
+
+.mar-tb-10{
+  margin:10px 0;
+}
+.mar-tb-20{
+  margin:20px 0;
+}
+
+.mar-tb-30{
+  margin:30px 0;
+}
+
+.mar-tb-40{
+  margin:40px 0;
+}
+
+.mar-tb-50{
+  margin:50px 0;
+}
+
+.mar-tb-60{
+  margin:60px 0;
+}
+
+.border-radius-3{
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.border-radius-5{
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.border-radius-10{
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/**
+* 1.0 - Default WordPress Classes
+**/
+.screen-reader-text{
+
+}
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after,
+.clearfix{
+    clear: both;
+}
+
+.widget select {
+    max-width: 100%;
+}
+
+.sticky {
+    display: block;
+}
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+    display: none;
+}
+
+
+.comment-content a {
+    word-wrap: break-word;
+}
+
+.bypostauthor {
+    display: block;
+}
+
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+
+.wp-caption {
+    margin-bottom: 1.5em;
+    max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+    margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+    text-align: center;
+}
+
+.gallery {
+    margin-bottom: 1.5em;
+}
+
+.gallery-item {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+    max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+    max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+    max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+    max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+    max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+    max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+    max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+    max-width: 11.11%;
+}
+
+.gallery-caption {
+    display: block;
+}
+
+/**
+* 2.0 - Elements
+**/
+
+html {
+  font-size: 1em;
+}
+
+body {
+  font-family: 'Merriweather',serif;
+  line-height: 1.45;
+  min-height:1200px;
+}
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4,h5, h6 {
+  font-family: 'Merriweather-Bold',sans-serif;
+  margin:0;
+  padding:0;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.041em;
+}
+
+h2 {font-size: 1.953em;}
+
+h3 {font-size: 1.563em;}
+
+h4 {font-size: 1.25em;}
+
+small, .font_small {font-size: 0.8em;}
+
+/**
+* 4.0 - Header
+*/
+.site-header{
+  padding:33px 20px;
+  margin:40px 0 0 0;
+}
+
+.site-header p{
+  margin:0 ;
+}
+.site-title{
+  display: block;
+  font-size:22px;
+  font-family: 'Merriweather-Heavy', serif;
+  margin-bottom:8px;
+}
+.site-title:hover{
+    text-decoration:none;
+}
+.site-subtitle{
+  font-size:14px;
+}
+
+/**
+* 5.0 - Main Navigation
+**/
+.main-navigation{
+  padding:16px 12px;
+  margin:0;
+  list-style-type: none;
+  float:right;
+}
+.main-navigation li{
+  position:relative;
+  display:inline-block;
+  margin:0 12px;
+}
+.main-navigation li a{
+  font-family: 'Merriweather',sans-serif;
+  font-size:13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.main-navigation li.current-menu-item a{
+  color:#e87e04;
+}
+.main-navigation li a:hover{
+  text-decoration:none;
+}
+
+/*
+* Second Level
+*/
+.sub-menu{
+  display:none;
+}
+
+.main-navigation li:hover > .sub-menu{
+  padding:0;
+  display:block;
+  position:absolute;
+  top:auto;
+  left:0;
+}
+.sub-menu{
+  padding:0;
+}
+.sub-menu li{
+  width: 145px;
+  max-width: 175px;
+  margin: 5px 0px;
+}
+.sub-menu li a{
+  font-size:12px;
+  display: block;
+  margin:5px 0 0 5px;
+}
+
+/*
+* Third Level
+*/
+.sub-menu li:hover > .sub-menu{
+  padding:0;
+  display:block;
+  position:absolute;
+  top:0;
+  left:145px;
+}
+
+
+/**
+* 5.2 Mobile Menu
+**/
+#mobile-menu > .uk-offcanvas-bar{
+  padding:20px 0 0 0 ;
+}
+.mobile-navigation{
+  padding:0;
+  list-style-type: none;
+}
+.mobile-navigation li{
+
+}
+.mobile-navigation li a{
+  padding:10px 0 10px 5px;
+  border-bottom:1px solid #e1e1e1;
+  font-size:14px;
+  display:block;
+}
+.mobile-navigation li a:hover{
+  text-decoration: none;
+}
+/**
+* 6.0 - Content
+**/
+.blog-single-entry{
+  margin-bottom:60px;
+}
+
+.post-content{
+  padding:30px 50px;
+}
+.post-meta{
+  font-family: 'Merriweather',sans-serif;
+  font-size:12px;
+  display:block;
+  padding:10px 0;
+}
+.post-meta > .post-comments{
+  margin-left:18px;
+  margin-right:18px;
+}
+.post-title{
+  font-family: 'Merriweather-Heavy',serif;
+  padding-bottom:40px;
+  margin-bottom:40px;
+  border-bottom:1px solid #eeeeee;
+}
+.post-content{
+  line-height:30px;
+}
+.post-read-more{
+  margin:10px 0;
+  padding:20px 0;
+  border-top:1px solid #eeeeee;
+}
+.read-more-btn{
+  font-size:14px;
+}
+nav.navigation > h2{
+   font-size:12px;
+}
+.nav-links{
+    padding:8px 0;
+    border-top:1px solid rgba(232,126,4,0.2);
+}
+.page-numbers{
+    margin:0 4px 0 0;
+    font-size:12px;
+}
+a.next{
+    float:right;
+}
+.no-posts-found{
+    padding:30px 50px;
+}
+/*
+* Archive Staff
+*/
+.single-archive-title{
+    font-size:14px;
+    padding:30px 50px;
+    margin-bottom:10px;
+}
+/**
+* 7.0 - Widgets
+**/
+.widget{
+  padding:30px 50px;
+  font-size:14px;
+  margin: 0 0 30px 0;
+}
+.widget-title{
+  font-size: 20px;
+  margin-bottom:30px;
+}
+.widget ul,
+.widget ol{
+  padding:0;
+  margin:0;
+  list-style-type: none;
+}
+
+.widget ul li:before,
+.widget ol li:before{
+  font-family:'FontAwesome';
+  content:'\f054';
+  font-size:10px;
+  margin-right:5px;
+  color:#bfbfbf;
+}
+.widget ul li,
+.widget ol li{
+  margin: 0 0 10px 0;
+}
+
+/**
+* 8.0 Comments default styles from https://css-tricks.com/snippets/wordpress/base-threaded-comments-styling/
+**/
+.comments-area{
+    padding:30px 50px;
+}
+ol.comment-list{
+    list-style: none;
+}
+.comments-title,
+#reply-title{
+    font-size:22px;
+    font-family: 'Merriweather-Heavy',sans-serif;
+    margin-bottom:20px;
+}
+.comment-body{
+    font-size:14px;
+    margin-bottom:40px;
+    padding-bottom:10px;
+    line-height: 25px;
+}
+ul.children{
+    border-left:2px solid #e87e04;
+}
+.comment-notes{
+    font-size:12px;
+}
+.comment-form label{
+    display:block;
+    font-size:14px;
+}
+.comment-form input[type="text"],
+.comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 0 0;
+    border: 1px solid #ececec;
+}
+.comment-form input[type="submit"]{
+    border:none;
+    padding:7px 12px;
+    cursor:pointer;
+}
