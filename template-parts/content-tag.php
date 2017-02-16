@@ -15,8 +15,8 @@ if ( have_posts() ): ?>
 		<?php if ( has_post_thumbnail() ): ?>
 			<div class="post-image">
 				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-					<?php the_post_thumbnail( 'post-featured-image', array(
-							'alt'=>get_the_title().' featured image'
+					<?php the_post_thumbnail( 'spectrumstarter-post-featured-image', array(
+							'alt'=>get_the_title().__(' featured image','spectrumstarter')
 						)
 					); ?>
 				</a>
@@ -26,20 +26,20 @@ if ( have_posts() ): ?>
 		<div class="post-content">
 			<div class="post-meta">
 				<time class="post-date">
-					<?php echo get_the_time( get_option( 'date_format' ) ); ?>
+                    <?php echo date_i18n(get_option( 'date_format' ) ); ?>
 				</time><!-- .post-date ends here-->
 
 				<span class="post-comments">
-              <?php printf( _nx( 'One Comment', '%1$s Comments', get_comments_number(), 'comments title', 'spectrumstarter' ), number_format_i18n( get_comments_number() ) ); ?>
+              <?php printf( _nx( '%1$s Comment', '%1$s Comments', get_comments_number(), 'comments title', 'spectrumstarter' ), number_format_i18n( get_comments_number() ) ); ?>
             </span><!-- .post-comments end here -->
 
 				<span class="post-author">
-              <?php echo __( 'Written by ', 'spectrumstarter' ); ?><?php the_author_posts_link(); ?>
+              <?php echo esc_attr(__( 'Written by ', 'spectrumstarter' )); ?><?php the_author_posts_link(); ?>
             </span><!-- .post-author ends here -->
 
 				<div class="post-categories uk-float-right">
 					<?php echo get_the_category_list( ',', '', get_the_ID() ); ?>
-					<a href="#" title="<?php echo __( 'View posts from this category', 'spectrumstarter' ); ?>" class="post-category">
+					<a href="#" title="<?php echo esc_attr(__( 'View posts from this category', 'spectrumstarter' )); ?>" class="post-category">
 					</a>
 				</div><!-- .post-categories ends here -->
 

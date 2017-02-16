@@ -58,8 +58,8 @@ if ( ! function_exists( 'spectrumstarter_theme_setup' ) ):
 		 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 		 */
 		add_theme_support( 'post-thumbnails' );
-		add_image_size( 'post-featured-image', 800, 533, true );
-		add_image_size( 'post-featured-fw-image', 1130, 650, true );
+		add_image_size( 'spectrumstarter-post-featured-image', 800, 533, true );
+		add_image_size( 'spectrumstarter-post-featured-fw-image', 1130, 650, true );
 
 		/*
 		 * Enable HTML5 support for the native WordPress galleries
@@ -74,7 +74,7 @@ if ( ! function_exists( 'spectrumstarter_theme_setup' ) ):
 		 * @since Spectrum Starter 0.1
 		 */
 		$spectrumstarter_bg_defaults = array(
-			'default-color'    => 'ededed',
+			'default-color'    => 'eeeeee',
 			'default-image'    => '',
 			'wp-head-callback' => 'spectrumstarter_bg_callback',
 		);
@@ -135,38 +135,33 @@ if ( ! function_exists( 'spectrumstarter_bg_callback' ) ):
 	 */
 
 	function spectrumstarter_bg_callback() {
-		$background = set_url_scheme( get_background_image() );
-		$color      = get_theme_mod( 'background_color', get_theme_support( 'custom-background', 'default-color' ) );
+        $background = esc_url(get_background_image());
+        $color = get_theme_mod('background_color', get_theme_support('custom-background', 'default-color'));
+        $color = sanitize_hex_color($color); // added this
+        if (!$background && !$color)
+            return;
+        $style = $color ? "background-color: #$color;" : '';
 
-		if ( ! $background && ! $color ) {
-			return;
-		}
+        if ($background) {
+            $image = " background-image: url('$background');";
 
-		$style = $color ? "background-color: #$color;" : '';
+            $repeat = get_theme_mod('background_repeat', get_theme_support('custom-background', 'default-repeat'));
+            if (!in_array($repeat, array('no-repeat', 'repeat-x', 'repeat-y', 'repeat')))
+                $repeat = 'repeat';
+            $repeat = " background-repeat: $repeat;";
 
-		if ( $background ) {
-			$image = " background-image: url('$background');";
+            $position = get_theme_mod('background_position_x', get_theme_support('custom-background', 'default-position-x'));
+            if (!in_array($position, array('center', 'right', 'left')))
+                $position = 'left';
+            $position = " background-position: top $position;";
 
-			$repeat = get_theme_mod( 'background_repeat', get_theme_support( 'custom-background', 'default-repeat' ) );
-			if ( ! in_array( $repeat, array( 'no-repeat', 'repeat-x', 'repeat-y', 'repeat' ) ) ) {
-				$repeat = 'repeat';
-			}
-			$repeat = " background-repeat: $repeat;";
+            $attachment = get_theme_mod('background_attachment', get_theme_support('custom-background', 'default-attachment'));
+            if (!in_array($attachment, array('fixed', 'scroll')))
+                $attachment = 'scroll';
+            $attachment = " background-attachment: $attachment;";
 
-			$position = get_theme_mod( 'background_position_x', get_theme_support( 'custom-background', 'default-position-x' ) );
-			if ( ! in_array( $position, array( 'center', 'right', 'left' ) ) ) {
-				$position = 'left';
-			}
-			$position = " background-position: top $position;";
-
-			$attachment = get_theme_mod( 'background_attachment', get_theme_support( 'custom-background', 'default-attachment' ) );
-			if ( ! in_array( $attachment, array( 'fixed', 'scroll' ) ) ) {
-				$attachment = 'scroll';
-			}
-			$attachment = " background-attachment: $attachment;";
-
-			$style .= $image . $repeat . $position . $attachment;
-		}
+            $style .= $image . $repeat . $position . $attachment;
+        }
 		?>
 		<style type="text/css" id="custom-background-css">
 			body.custom-background {
@@ -204,8 +199,8 @@ if ( ! function_exists( 'spectrumstarter_styles_loader' ) ):
 	function spectrumstarter_styles_loader() {
 
 		wp_enqueue_style( 'uikit', get_template_directory_uri() . '/css/UIkit/uikit.min.css', '', '', 'all' ); // UIkit framework
-		wp_enqueue_style( 'merriweather-font', get_template_directory_uri() . '/fonts/Merriweather/stylesheet.css', '', '', 'all' ); // Merrriweather font.
-		wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/fonts/FontAwesome/css/font-awesome.min.css', '', '', 'all' ); // Font Awesome font.
+		wp_enqueue_style( 'spectrumstarter-merriweather-font', get_template_directory_uri() . '/fonts/Merriweather/stylesheet.css', '', '', 'all' ); // Merrriweather font.
+		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/FontAwesome/css/font-awesome.min.css', '', '', 'all' ); // Font Awesome font.
 
 
 		wp_enqueue_style( 'spectrumstarter-main-styles', get_stylesheet_uri(), '', '', 'all' ); // Main styles, styles.css file
@@ -223,17 +218,12 @@ if ( ! function_exists( 'spectrumstarter_scripts_loader' ) ):
 	 */
 
 	function spectrumstarter_scripts_loader() {
-		wp_enqueue_script( 'jquery' );
 
 		if ( is_singular() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
 
-		wp_enqueue_script( 'uikit', get_template_directory_uri() . '/js/UIkit/uikit.min.js', '', '', true ); // UIkit framework js
-
-
-		wp_enqueue_script( 'spectrumstarter-main', get_template_directory_uri() . '/js/spectrum-starter.js', '', '', true ); // Main js file
-
+		wp_enqueue_script( 'jquery-uikit', get_template_directory_uri() . '/js/UIkit/uikit.min.js',array('jquery'), '', true ); // UIkit framework js
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'spectrumstarter_scripts_loader' );
@@ -268,7 +258,7 @@ if ( ! function_exists( 'spectrumstarter_get_archive_title' ) ):
 	/**
 	 * This function gets the title of the category/tag/search/archive which is shown at the moment.
 	 * We hook this function on the generic hook for all of our archive pages.
-	 * before_general_archive_content_starts
+	 * spectrumstarter_before_general_archive_content_starts
 	 * @since SpectrumStarter 0.1
 	 */
 
@@ -276,24 +266,11 @@ if ( ! function_exists( 'spectrumstarter_get_archive_title' ) ):
 
 		$title = '';
 
-		if ( is_tag() ):
-
-			$title = single_tag_title( __( 'You are viewing posts tagged with: ', 'spectrumstarter' ), false );
-
-		elseif ( is_category() ):
-
-			$title = single_cat_title( __( 'You are viewing posts in: ', 'spectrumstarter' ), false );
-
-		elseif ( is_search() ):
-
-			$q     = get_query_var( 's' );
-			$title = __( 'Search results for: ', 'spectrumstarter' ) . $q;
-
-		elseif ( is_archive() ): // it also gets the author page.
-			$title = __('Archive of ','spectrumstarter').get_the_archive_title();
+		if(is_archive()):
+            $title = get_the_archive_title();
 		endif;
 
 		echo '<h2 class="single-archive-title">' . $title . '</h2>';
 	}
 endif;
-add_action( 'before_general_archive_content_starts', 'spectrumstarter_get_archive_title' );
+add_action( 'spectrumstarter_before_general_archive_content_starts', 'spectrumstarter_get_archive_title' );

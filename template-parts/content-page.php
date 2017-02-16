@@ -18,13 +18,13 @@ if ( have_posts() ): ?>
 					<?php
 
 					if ( is_page_template( 'page-templates/fullwidth-page.php' ) ):
-						the_post_thumbnail( 'post-featured-fw-image', array(
-								'alt' => get_the_title() . ' featured image'
+						the_post_thumbnail( 'spectrumstarter-post-featured-fw-image', array(
+                                'alt'=>get_the_title().__(' featured image','spectrumstarter')
 							)
 						);
 					else:
-						the_post_thumbnail( 'post-featured-image', array(
-								'alt' => get_the_title() . ' featured image'
+						the_post_thumbnail( 'spectrumstarter-post-featured-image', array(
+                                'alt'=>get_the_title().__(' featured image','spectrumstarter')
 							)
 						);
 					endif;
@@ -42,7 +42,9 @@ if ( have_posts() ): ?>
 				<?php the_content(); ?>
 
 			</div><!-- .post-content ends here -->
-
+            <div id="main-entry-link-pages">
+                <?php wp_link_pages(); ?>
+            </div>
 		</div><!-- .blog-single-entry ends here -->
 
 		<?php wp_link_pages(); ?>
@@ -53,7 +55,7 @@ if ( have_posts() ): ?>
 <?php else: // no posts available. ?>
 
 	<div class="no-posts-found">
-		<h4><?php echo __( 'No posts were found', 'spectrumstarter' ); ?></h4>
+		<h4><?php echo esc_attr(__( 'No posts were found', 'spectrumstarter' )); ?></h4>
 	</div>
 
 <?php endif; ?>

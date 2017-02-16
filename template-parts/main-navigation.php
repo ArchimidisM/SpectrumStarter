@@ -8,7 +8,7 @@
  * @since SpectrumStarter 0.1
  */
 $main_menu_args = array(
-  'location'=>'primary',
+  'theme_location'=>'primary',
   'fallback_cb' => false,
   'menu_class'  => 'main-navigation border-radius-5',
   'container'   => false
@@ -16,6 +16,6 @@ $main_menu_args = array(
 wp_nav_menu($main_menu_args);
 ?>
 <!-- Toggle for the mobile menu -->
-<a href="#mobile-menu" id="mobile-menu-toggle" data-uk-offcanvas title="<?php echo __('Open the menu','spectrumstarter'); ?>">
+<a href="#mobile-menu" id="mobile-menu-toggle" data-uk-offcanvas title="<?php echo esc_attr(__('Open the menu','spectrumstarter')); ?>">
    <span class="fa fa-3x fa-bars"></span>
 </a>

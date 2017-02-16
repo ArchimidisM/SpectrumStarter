@@ -45,11 +45,11 @@
             </div>
          </div><!-- #offcanvas mobile nav ends here -->
 
-         <?php do_action('before_site_header'); ?>
+         <?php do_action('spectrumstarter_before_site_header'); ?>
 
          <header class="site-header" id="main-site-header">
 
-           <?php do_action('before_site_header_inside'); ?>
+           <?php do_action('spectrumstarter_before_site_header_inside'); ?>
 
                 <div class="uk-grid">
                   <div class="uk-width-large-3-10 uk-width-medium-3-10 uk-width-small-5-10">
@@ -64,11 +64,11 @@
                   </div>
                 </div>
 
-            <?php do_action('after_site_header_inside'); ?>
+            <?php do_action('spectrumstarter_spectrumstarter_after_site_header_inside'); ?>
 
          </header>
 
-         <?php do_action('after_site_header'); ?>
+         <?php do_action('spectrumstarter_after_site_header'); ?>
 
 
        </div><!-- .uk-width-10-10 ends here -->
