@@ -39,7 +39,7 @@ if ( have_posts() ): ?>
 
 					<div class="post-categories uk-float-right">
 						<?php echo get_the_category_list( ',', '', get_the_ID() ); ?>
-						<a href="#" title="<?php echo esc_attr(__( 'View posts from this category', 'spectrumstarter' )); ?>" class="post-category">
+						<a href="#" title="<?php echo esc_attr_e( 'View posts from this category', 'spectrumstarter' ); ?>" class="post-category">
 						</a>
 					</div><!-- .post-categories ends here -->
 

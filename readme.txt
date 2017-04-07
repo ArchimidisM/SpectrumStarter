@@ -29,7 +29,7 @@ SpectrumStarter, is a great , simple and responsive Starter WordPress Theme. It 
 
 == Copyright ==
 
-Spectrum Starter WordPress Theme, Copyright 2016 WordPress.org
+Spectrum Starter WordPress Theme, Copyright 2016-17 Archmidis Mertzanos
 Spectrum Starter is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
@@ -110,3 +110,7 @@ You can modify the theme with the help of the hooks that contains. List of the h
 = Version 0.4 =
 - Minor fixes
 - Better function prefixing.
+
+= Version 0.5 =
+- All action hooks prefixed
+-

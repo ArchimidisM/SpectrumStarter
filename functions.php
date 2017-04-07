@@ -137,7 +137,7 @@ if ( ! function_exists( 'spectrumstarter_bg_callback' ) ):
 	function spectrumstarter_bg_callback() {
         $background = esc_url(get_background_image());
         $color = get_theme_mod('background_color', get_theme_support('custom-background', 'default-color'));
-        $color = sanitize_hex_color($color); // added this
+        $color = esc_attr($color); // added this
         if (!$background && !$color)
             return;
         $style = $color ? "background-color: #$color;" : '';

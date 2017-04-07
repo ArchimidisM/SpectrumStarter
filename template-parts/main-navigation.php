@@ -16,6 +16,6 @@ $main_menu_args = array(
 wp_nav_menu($main_menu_args);
 ?>
 <!-- Toggle for the mobile menu -->
-<a href="#mobile-menu" id="mobile-menu-toggle" data-uk-offcanvas title="<?php echo esc_attr(__('Open the menu','spectrumstarter')); ?>">
+<a href="#mobile-menu" id="mobile-menu-toggle" data-uk-offcanvas title="<?php echo esc_attr_e('Open the menu','spectrumstarter'); ?>">
    <span class="fa fa-3x fa-bars"></span>
 </a>

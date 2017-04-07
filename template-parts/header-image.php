@@ -13,7 +13,7 @@ if(get_header_image() != ''): // has a header image ?>
 <div class="uk-width-10-10">
   <div class="site-header-image-container">
 
-  <img class="header-image" src="<?php echo esc_url(get_header_image()); ?>" height="<?php echo esc_attr(get_custom_header()->height) ; ?>" width="<?php echo esc_attr(get_custom_header()->width); ?>" alt="<?php echo __('Header Image','spectrumstarter'); ?>"/>
+  <img class="header-image" src="<?php echo esc_url(get_header_image()); ?>" height="<?php echo esc_attr(get_custom_header()->height) ; ?>" width="<?php echo esc_attr(get_custom_header()->width); ?>" alt="<?php echo esc_attr_e('Header Image','spectrumstarter'); ?>"/>
 
   </div>
 
